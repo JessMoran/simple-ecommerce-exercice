@@ -1,3 +1,14 @@
 body{
   font-family: 'Indie Flower', cursive;
 }
+
+#card2 {
+  font-size: 5vh;
+  margin: -1vh -1vh;
+}
+
+#counterItems{
+  background-color: #aad000;
+  font-size: 4vh;
+  margin: 0 1vh;
+}
