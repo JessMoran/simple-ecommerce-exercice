@@ -4,7 +4,7 @@ body{
 
 footer{
   background-color: #bad69c;
-  height: 20vh;
+  height: 10vh;
   text-align: center;
 }
 
@@ -15,6 +15,7 @@ footer{
 
 #counterItems{
   background-color: #aad000;
+  font-size: 3vh;
 }
 
 #checkout,.btn{
@@ -66,4 +67,8 @@ footer{
 
 .plantsName,.price{
   color:#48902b;
+}
+
+#card {
+  font-size: 4vh;
 }
