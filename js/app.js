@@ -9,9 +9,9 @@ function drawProducts(data) {
 
 function createProductHTML(product) {
   let template = `
-    <h3>${product.title}</h3>
-    <img src='${product.imageUrl}' alt='${product.description}'/>
-    <p>${product.description}</p>
+    <h3 class="plantsName">${product.title}</h3>
+    <img class="plants" src='${product.imageUrl}' alt='${product.description}'/>
+    <p class="price"> Price: ${product.price} MXN</p>
     <button data-product-id=${product.id}
       onclick="addToCart(this,${product.id})"
       class='btn btn-primary'>
@@ -23,78 +23,66 @@ function createProductHTML(product) {
   productContainer.className = "col text-center";
   productContainer.innerHTML = template;
   return productContainer;
+
 }
 
 drawProducts(data);
 
-function addToCart(eventTrigger, ItemID) {
-  if (eventTrigger.classList.contains('clicked') === false) {
-    increaseCounter(eventTrigger);
-    changeButtonStatus(false, eventTrigger);
-    addProduct(ItemID)
-  } else if (eventTrigger.classList.contains('clicked') === true) {
-    decreaseCounter(eventTrigger);
-    changeButtonStatus(true, eventTrigger);
-    deleteProduct(ItemID)
+  let cartProducts = [];
+
+function addToCart(btnEvent,productId) {
+
+  if (btnEvent.classList.contains('clicked') == false ) {
+    increaseCounter();
+    changeButtonStatus(btnEvent,false);
+
+    let newArray = data.products.filter(function(element){
+      if (productId == element.id) {
+          cartProducts.push(element);
+      }
+    })
+   console.log(cartProducts);
+
+   localStorage.setItem("newProducts",JSON.stringify(cartProducts));
+
+
+
+  }else if (btnEvent.classList.contains('clicked') == true ){
+    decreaseCounter()
+    changeButtonStatus(btnEvent,true);
+    removeFromCart(productId)
+    console.log(cartProducts);
   }
+
 }
 
-
-shoppingCart = [];
-
-
-
-function addProduct(productId) {
-  (data.products).forEach(product => {
-    if (productId === product.id) {
-      shoppingCart.push(product);
-    }
+function removeFromCart(productId) {
+  cartProducts = cartProducts.filter(function(element){
+    return  element.id !== productId
+    console.log(newArray);
   });
-  // console.log(shoppingCart);
-  saveShoppingCart();
 }
 
-
-function deleteProduct(productId) {
-  shoppingCart = shoppingCart.filter(function (item) {
-    return item.id !== productId
-  })
-  // console.log(shoppingCart);
-  saveShoppingCart();
+function increaseCounter() {
+  let counter = parseInt(document.getElementById("counterItems").textContent);
+  let counter2 = document.getElementById("counterItems");
+  counter += 1
+  counter2.innerHTML = counter;
 }
 
-function increaseCounter(eventTrigger) {
-  eventTrigger.classList.toggle('clicked')
-  const counter = document.getElementById('counterItems');
-  let counterNumber = parseInt(document.getElementById('counterItems').textContent);
-  counterNumber += 1
-  saveCounter(counterNumber);
-  counter.innerHTML = counterNumber;
-
+function decreaseCounter() {
+  let counter = parseInt(document.getElementById("counterItems").textContent);
+  let counter2 = document.getElementById("counterItems");
+  counter -= 1
+  counter2.innerHTML = counter;
 }
 
-function decreaseCounter(eventTrigger) {
-  eventTrigger.classList.toggle('clicked')
-  const counter = document.getElementById('counterItems');
-  let counterNumber = parseInt(document.getElementById('counterItems').textContent);
-  counterNumber -= 1
-  saveCounter(counterNumber);
-  counter.innerHTML = counterNumber;
-}
-
-function changeButtonStatus(condition, eventTrigger) {
-  if (condition === true) {
-    eventTrigger.textContent = 'Agregar al carrito';
-  } else if (condition === false) {
-    eventTrigger.textContent = 'Quitar del carrito';
+function changeButtonStatus(button,boolean) {
+  if (boolean == false) {
+    button.innerText = ("Quitar del carrito");
+    button.classList.toggle("clicked");
+  }else if (boolean == true) {
+    button.innerText = ("Agregar al carrito");
+    button.classList.toggle("clicked");
   }
-}
-
-function saveShoppingCart() {
-  localStorage.setItem("shoppingCartLS", JSON.stringify(shoppingCart));
-
-}
-
-function saveCounter (counterNumber) {
-  localStorage.setItem("firstCounter",counterNumber );
 }

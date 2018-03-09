@@ -5,38 +5,38 @@ var data = {
       title: "Hender Ivy",
       description: "Just another description",
       id: 1,
-      price: 3900
+      price: 200
     },
     {
       imageUrl: "assets/images/plant-2.jpg",
       title: "Evelen Jelly",
       description: "Just another description",
       id: 2,
-      price: 6900
+      price: 300
     },
     {
-      imageUrl: "assets/images/plant-1.png",
-      title: "Hender Ivy",
+      imageUrl: "assets/images/plant-3.jpg",
+      title: "Cactus",
       description: "Yes",
       id: 3,
-      price: 6500
+      price: 500
     },
     {
-      imageUrl: "assets/images/plant-2.jpg",
+      imageUrl: "assets/images/plant-4.jpg",
       title: "Evelen Jelly",
       description: "Yes",
       id: 4,
-      price: 1000
+      price: 400
     },
     {
-      imageUrl: "assets/images/plant-1.png",
-      title: "Hender Ivy",
+      imageUrl: "assets/images/plant-5.jpg",
+      title: "Orquidea",
       description: "Yes",
       id: 5,
-      price: 9500
+      price: 900
     },
     {
-      imageUrl: "assets/images/plant-2.jpg",
+      imageUrl: "assets/images/plant-6.jpg",
       title: "Evelen Jelly",
       description: "Yes",
       id: 6,
