@@ -1,43 +1,43 @@
 var data = {
   products: [
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Nintendo Switch",
+      imageUrl: "assets/images/plant-1.png",
+      title: "Hender Ivy",
       description: "Just another description",
       id: 1,
       price: 3900
     },
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Play Station 4",
+      imageUrl: "assets/images/plant-2.jpg",
+      title: "Evelen Jelly",
       description: "Just another description",
       id: 2,
       price: 6900
     },
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Play Station 3",
+      imageUrl: "assets/images/plant-1.png",
+      title: "Hender Ivy",
       description: "Yes",
       id: 3,
       price: 6500
     },
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Play Station 2",
+      imageUrl: "assets/images/plant-2.jpg",
+      title: "Evelen Jelly",
       description: "Yes",
       id: 4,
       price: 1000
     },
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Play Station 1",
+      imageUrl: "assets/images/plant-1.png",
+      title: "Hender Ivy",
       description: "Yes",
       id: 5,
       price: 9500
     },
     {
-      imageUrl: "http://dummyimage.com/100x100",
-      title: "Nintendo 64",
+      imageUrl: "assets/images/plant-2.jpg",
+      title: "Evelen Jelly",
       description: "Yes",
       id: 6,
       price: 700
