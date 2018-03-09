@@ -1,0 +1,58 @@
+body{
+  font-family: 'Indie Flower', cursive;
+}
+
+footer{
+  background-color: #bad69c;
+  text-align: center;
+}
+
+#logo{
+  height: 10vh;
+  width: 30%;
+}
+
+#counterItems{
+  background-color: #aad000;
+}
+
+#checkout{
+    background-color: #48902b;
+    color:#fff;
+}
+
+#background{
+  height: 130vh;
+  width: 100%;
+}
+
+#home{
+  color: #48902b;
+  font-size: 200%;
+  margin-left: 150%;
+}
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+#available{
+  color: #48902b;
+  margin-top: 5%;
+}
+
+#leaves{
+  height: 10vh;
+  width:20%;
+}
+.nav-link{
+  height: 7vh;
+  width: 100%;
+}
+
+.fa{
+  height: 10vh;
+  width: 100%;
+}
