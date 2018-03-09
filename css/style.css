@@ -41,3 +41,7 @@ body{
 footer {
   width: 200vh;
 }
+
+#total{
+  font-size: 100%;
+}

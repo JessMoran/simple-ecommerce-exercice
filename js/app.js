@@ -68,6 +68,7 @@ function increaseCounter() {
   let counter2 = document.getElementById("counterItems");
   counter += 1
   counter2.innerHTML = counter;
+  saveItemsContent(counter)
 }
 
 function decreaseCounter() {
@@ -75,6 +76,7 @@ function decreaseCounter() {
   let counter2 = document.getElementById("counterItems");
   counter -= 1
   counter2.innerHTML = counter;
+  saveItemsContent(counter)
 }
 
 function changeButtonStatus(button,boolean) {
@@ -85,4 +87,8 @@ function changeButtonStatus(button,boolean) {
     button.innerText = ("Agregar al carrito");
     button.classList.toggle("clicked");
   }
+}
+
+function saveItemsContent (counter){
+  localStorage.setItem("saveProducts",counter);
 }
