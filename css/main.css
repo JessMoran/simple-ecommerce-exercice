@@ -4,6 +4,7 @@ body{
 
 footer{
   background-color: #bad69c;
+  height: 20vh;
   text-align: center;
 }
 
@@ -16,9 +17,15 @@ footer{
   background-color: #aad000;
 }
 
-#checkout{
+#checkout,.btn{
     background-color: #48902b;
+    border: #48902b;
     color:#fff;
+}
+
+
+#checkout.btn:hover{
+  background-color: #aad000;
 }
 
 #background{
@@ -32,14 +39,8 @@ footer{
   margin-left: 150%;
 }
 
-.navbar{
-  position: fixed;
-  width: 100%;
-  z-index: 999;
-}
-
 #available{
-  color: #48902b;
+  color: #aad000;
   margin-top: 5%;
 }
 
@@ -47,12 +48,23 @@ footer{
   height: 10vh;
   width:20%;
 }
-.nav-link{
-  height: 7vh;
-  width: 100%;
+
+#copyright{
+  color:#fff;
+  padding-top: 2%;
 }
 
-.fa{
-  height: 10vh;
+.navbar{
+  position: fixed;
   width: 100%;
+  z-index: 999;
+}
+
+.plants{
+  height: 55vh;
+  width: 30%;
+}
+
+.plantsName,.price{
+  color:#48902b;
 }
